@@ -1,8 +1,26 @@
 h1 {
   font-family: "Inter", sans-serif;
+  font-size: 49px;
+  line-height: 56px;
+  font-weight: normal;
+}
+
+h1 span{
+    font-weight: bold;
 }
 
 body{
   font-family: "Open Sans", sans-serif;
 }
 
+span, a{
+    color: #ff9900;
+
+    /* para tirar um underline do link a*/
+    text-decoration: none;
+}
+
+
+p{
+    color: #7d7987;
+}
