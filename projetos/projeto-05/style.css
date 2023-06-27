@@ -1,0 +1,23 @@
+:root{
+    --ff-deading: 'Epilogue', sans-rerif;
+    --ff-textng: 'Open sans', sans-rerif;
+
+    --bg-primary: #28293E;
+    --fc-primary: #ffffff;
+    --fc-secondary: #BBB3E6;
+}
+
+body{
+    font-family: var(--ff-textng);
+    background-color: var(--bg-primary);
+    color: var(--fc-primary);
+}
+
+header{
+    font-family: var(--ff-deading);
+}
+
+header p{
+    color: var(--fc-secondary);
+    text-transform: uppercase;
+}
