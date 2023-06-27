@@ -17,7 +17,7 @@
     --fs-body: 1.6rem;
     --fs-heading: 4rem;
 }
-
+ 
 body{
     font-family: var(--ff-textng);
     background-color: var(--bg-primary);
@@ -57,4 +57,20 @@ header h1{
     font-weight: 800;
     font-size: var(--fs-heading);
     line-height: 4.8rem;
+}
+
+.card{
+    position: relative;
+}
+
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+}
+
+
+.card h2{
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
 }
