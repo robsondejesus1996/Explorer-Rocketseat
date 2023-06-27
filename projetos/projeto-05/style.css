@@ -16,7 +16,8 @@
 
     font-size: 62.5%;
     --fs-body: 1.6rem;
-    --fs-heading: 4rem;
+    --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+    --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem);
 }
  
 body{
@@ -32,6 +33,7 @@ body{
     margin: 0 auto;
 }
 
+
 img{
     width: 100%;
     height: auto;
@@ -40,7 +42,9 @@ img{
 header{
     margin: 10rem 0 8rem;
     font-family: var(--ff-deading);
+
     text-align: center;
+    animation: topdown 700ms;
 }
 
 header p{
@@ -63,6 +67,9 @@ header h1{
 main{
     display: grid;
     gap: 3.2rem;
+
+    padding-bottom: 10rem;
+    animation: downtop 700ms 350ms backwards;
 }
 
 .card{
@@ -74,6 +81,7 @@ main{
 .card img {
     height: 41.6rem;
     object-fit: cover;
+    filter: brightness(0.5);
 
     border-radius: 6px;
 
@@ -91,7 +99,7 @@ main{
     bottom: 5.2rem;
     left: 2.8rem;
 
-    font-size: var(--fs-heading);
+    font-size: var(--fs-heading-sm);
     font-weight: 800;
 
     display: flex;
@@ -115,16 +123,6 @@ main{
     
 }
 
-header {
-    animation: topdown 700ms;
-}
-
-main{
-    animation: downtop 700ms 350ms forwards;
-    opacity: 0;
-    transform: translateY(0);
-}
-
 @keyframes topdown {
     0%{
         opacity: 0;
@@ -146,4 +144,38 @@ main{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+@media(min-width: 700px){
+    
+    .page{
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 930px){
+    main {
+        grid-template-areas: "A B"
+        "C D";
+    }
+
+    main div:nth-child(1){
+        grid-area: A;
+    }
+    main div:nth-child(2){
+        grid-area: B;
+    }
+    main div:nth-child(3){
+        grid-area: C;
+    }
+
+    main div:nth-child(4){
+        grid-area: D;
+    }
+
 }
